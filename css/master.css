@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    margin:0;
+    
+}
+
+.pw {
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 500px;
+    background-color: gray;
+}
+
+.pw-label {
+display: block;
+}
+.pw-area {
+
+}
+.pw-sumbit {
+
+}
