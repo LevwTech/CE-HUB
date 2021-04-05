@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="https://fontawesome.com/v4.7.0/icon/lock">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
   </head>
   <body>
@@ -11,11 +11,36 @@
       <h1>Enter Password </h1>
       <div class="input-box">
           <i class="fa fa-lock"></i>
-          <input type="Password" placeholder="password">
+          <input type="Password" placeholder="password" id="myInput">
+          <span class="eye" onclick="hide()">
+            <i id="hide1" class="fa fa-eye-slash"> </i>
+            <i id="hide2" class="fa fa-eye"> </i>
+        </span>
+
+
       </div>
+      <button type="button" class="Login-btn">LOGIN</button>
 
     </div>
+    <script>
+    function hide(){
+      var x = document.getElementById("myInput");
+      var y = document.getElementById("hide1");
+      var z = document.getElementById("hide2");
 
+      if (x.type === 'password') {
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+      }
+      else {
+        x.type = 'password';
+        y.style.display = "none";
+        z.style.display = "block";
+      }
+
+    }
+    </script>
   </body>
 </html>
 
@@ -27,4 +52,5 @@
           <input class="pw-area" name="password" type="password" required>
           <input class="pw-submit" type="submit">
       </form>
+        <input type="sumbit" name="LOGIN" value="login">
   </div>  -->
