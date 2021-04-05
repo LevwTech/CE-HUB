@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login</title>
-  </head>
-  <body>
-    <div class="form-box">
-      <h1>Enter Password </h1>
-      <div class="input-box">
-          <i class="fa fa-lock"></i>
-          <input type="Password" placeholder="password" id="myInput">
-          <span class="eye" onclick="hide()">
-            <i id="hide1" class="fa fa-eye-slash"> </i>
-            <i id="hide2" class="fa fa-eye"> </i>
-        </span>
 
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
 
-      </div>
-      <button type="button" class="Login-btn">LOGIN</button>
+<body>
+  <form action="" method="post">
+
+    <h1>Get into CE-HUB!</h1>
+    <div class="input-box">
+      <i class="fa fa-lock"></i>
+      <input type="Password" placeholder="password" id="myInput">
+      <span class="eye" onclick="hide()">
+        <i id="hide1" class="fa fa-eye-slash"> </i>
+        <i id="hide2" class="fa fa-eye"> </i>
+      </span>
+
 
     </div>
-    <script>
-    function hide(){
+    <input type="sumbit" class="Login-btn" value="Get in" style="text-align: center;">
+  </form>
+  <script>
+    function hide() {
       var x = document.getElementById("myInput");
       var y = document.getElementById("hide1");
       var z = document.getElementById("hide2");
 
       if (x.type === 'password') {
-          x.type = "text";
-          y.style.display = "block";
-          z.style.display = "none";
+        x.type = "text";
+        y.style.display = "block";
+        z.style.display = "none";
       }
       else {
         x.type = 'password';
@@ -40,8 +44,11 @@
       }
 
     }
-    </script>
-  </body>
+  </script>
+
+
+</body>
+
 </html>
 
 
