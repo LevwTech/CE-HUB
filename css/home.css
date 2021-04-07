@@ -1,139 +1,9 @@
-* {
-    margin:0;
-    padding: 0;
-}
-:root {
-    --backColor: #2C2F33;
-}
 
-nav {
-    z-index: 100;
-    padding: 0 5% 0 5%;
-    display: flex;
-    width: 100%;
-    height: 70px;
-    background-color: var(--backColor,black);
-    flex-flow: row nowrap;
-    position:fixed;
-    top:0;
-    overflow: hidden;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.637);
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    width: 50%;
-}
-.logo {
-width: 5%;
-background-image:url("../imgs/logo.png");
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-}
-.logop {
-    margin-right: 20px;
-    text-align: center;
-    line-height: 70px;
-    font-size: 40px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-shadow: 0 2px 5px black;
-   
-}
-.space{
-    width: 20%;
-
-}
-nav a {
-    /* background-color: red; */
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 22px;
-    line-height: 65px;
-    color: white;
-}
-
-
-footer{
-    height: 450px;
-    background-color: var(--backColor,black);
-    color: white;
-    display: flex;
-    flex-flow: row nowrap;
-    font-family: sans-serif;
-}
-.menu {
-width: 50%;
-}
-.socials{
-width:50%;
-}
-.sociallinks{
-    padding-top: 40px;
-    display: flex;
-flex-flow: column wrap;
-justify-content: space-evenly;
-align-items: center;
-}
-footer label {
-display: block;
-    font-size: 30px ;
-    text-align: center;
-    margin-top: 15px;
-    padding-bottom: 10px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.267);
-
-}
-.mainmenu{
-
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-   margin-top: 40px;
-}
-
-footer a {
-    color: white;
- font-family: sans-serif;
- text-decoration: none;
- margin-top: 15px;
- margin-bottom: 15px;
- padding: 10px;
- font-size: 18px;
-
-}
-footer img {
-    width: 80px;
-    height: 80px;
-}
-
-.rights {
-    height: 90px;
-    color: var(--backColor);
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: black;
-    text-align: center;
-    line-height: 90px;
-    font-weight: bold;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------ */
 .cover  {
   height: 590px;
   padding: 100px;  
 }
-html { 
-    background: url("../imgs/coverblur.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+
 .choose{
 
   width: 340px;
@@ -244,8 +114,6 @@ height: 250px;
     padding: 10px 50px;
     display: block;
     font-weight: bold;
-
-  
 }
 
 

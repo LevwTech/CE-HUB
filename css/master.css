@@ -1,78 +1,134 @@
-*{
-  margin:0;
-  padding:0;
+* {
+    margin:0;
+    padding: 0;
+}
+:root {
+    --backColor: #2C2F33;
 }
 
-body{
-  background-image:url("../imgs/background.jpg");
-  background-size: cover;
-  background-position: center;
-  font-family: sans-serif;
+nav {
+    z-index: 100;
+    padding: 0 5% 0 5%;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: var(--backColor,black);
+    flex-flow: row nowrap;
+    position:fixed;
+    top:0;
+    overflow: hidden;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.637);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.logo {
+width: 5%;
+background-image:url("../imgs/logo.png");
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+}
+.logop {
+    margin-right: 20px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 2px 5px black;
+   
+}
+.space{
+    width: 20%;
+
+}
+nav a {
+    /* background-color: red; */
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 65px;
+    color: white;
 }
 
-form{
-  width: 500px;
-  background: rgba(0,0,0,0.8);
-  margin: 12% auto;
-  padding: 50px 0;
-  color:#fff;
-  box-shadow:0 0 20px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
+footer{
+    height: 450px;
+    background-color: var(--backColor,black);
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: sans-serif;
+}
+.menu {
+width: 50%;
+}
+.socials{
+width:50%;
+}
+.sociallinks{
+    padding-top: 40px;
+    display: flex;
+flex-flow: column wrap;
+justify-content: space-evenly;
+align-items: center;
+}
+footer label {
+display: block;
+    font-size: 30px ;
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.267);
+
+}
+.mainmenu{
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+   margin-top: 40px;
 }
 
-h1{
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.input-box{
-margin: 31px auto;
-width:80%;
-border-bottom:1px solid #fff;
+footer a {
+    color: white;
+ font-family: sans-serif;
+ text-decoration: none;
+ margin-top: 15px;
+ margin-bottom: 15px;
+ padding: 10px;
+ font-size: 18px;
 
 }
-
-.input-box input{
-  width:90%;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #fff;
+footer img {
+    width: 80px;
+    height: 80px;
 }
 
-::placeholder{
-  color: #ccc;
+.rights {
+    height: 90px;
+    color: var(--backColor);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    text-align: center;
+    line-height: 90px;
+    font-weight: bold;
 }
-
-.fa{
-
-  margin-right:5px
-}
-
-.eye{
-
-  position: absolute;
-}
-
-#hide1{
-  display: none;
-}
-
-.Login-btn{
-margin: 40px auto 20px;
-width: 80%;
-display:block;
-outline:none;
-padding: 10px 0px;
-border: 1px solid #fff;
-cursor: pointer;
-background: transparent;
-color: #fff;
-font-size:16px;
-caret-color: transparent;
-}
+html { 
+    background: url("../imgs/coverblur.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+L
+  /* THIS FILE IS MASTER CSS FILE THAT SHOULD BE INCLUDED IN ALL WEBSITE PAGES EXCEPT FOR INDEX/LOGIN PAGE
+  IT INCLUDES STYLING FOR NAV,FOOTER AND BACKGROUND IMAGE ON HTML
+  ANY PAGE SHOULD INCLUDE IT ALONG WITH ITS OTHER CSS FILE FOR EXECLUSIVE SYLING FOR IT */
