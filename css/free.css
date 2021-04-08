@@ -1,0 +1,42 @@
+
+section {
+height: 1000px;
+}
+.free {
+    height: 150px;
+    font-size: 80px;
+    text-align: center;
+    width: 70%;
+    margin:auto;
+    margin-top: 200px !important;
+    font-family: 'Pacifico', cursive;
+    background-image: linear-gradient(to bottom,#6a71c2, #c39260 ,#2C2F33);
+    box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    opacity: 0.9;
+    transition-duration: 300ms; }
+.free:hover{
+    width: 72%;
+}
+img {
+    width: 20%;
+    margin: auto;
+    display: block;
+}
+.do {
+    font-size: 35px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    color: #c39260;
+    text-shadow: 0 4px 5px black ;
+    font-family: 'Pacifico', cursive;
+    line-height: 60px;
+
+    
+
+}
