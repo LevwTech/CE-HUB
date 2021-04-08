@@ -1,0 +1,91 @@
+section {
+    height: 2000px;
+}
+.today {
+    height: 140px;
+    font-size: 70px;
+    text-align: center;
+    width: 80%;
+    margin:auto;
+    margin-top: 200px !important;
+    font-family: 'Pacifico', cursive;
+    background-image: linear-gradient(to bottom,#6a71c2, #c39260 ,#2C2F33);
+    box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    opacity: 0.9;
+    transition-duration: 300ms; 
+}
+.today:hover{
+    width: 82%;
+}
+.first {
+
+    height: 140px;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px !important;
+    font-family: sans-serif;
+    opacity: 0.9; 
+    color: white;
+}
+.firstall {
+    box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 80%;
+    margin:auto;
+    padding-bottom :10px;
+    padding-top :10px;
+    
+    
+}
+.labnames {
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: space-evenly;
+} 
+.then{
+    height: 140px;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px !important;
+    font-family: sans-serif;
+    opacity: 0.9; 
+    color: white;
+
+}
+.thenall{
+    box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 80%;
+    margin:auto;
+    padding-bottom :10px;
+    padding-top :10px;
+}
+.labschdule{
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: space-evenly;
+}
+ section img {
+    border: 5px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
