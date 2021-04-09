@@ -67,6 +67,7 @@ height: 250px;
     -ms-border-radius: 30px ;
     -o-border-radius: 30px ;
     opacity: 0.9;
+    margin-top: 200px !important;
 }
 .important h1{
     text-transform: uppercase;
@@ -115,6 +116,9 @@ height: 250px;
     display: block;
     font-weight: bold;
 }
+li {
 
+    padding-top: 10px;
+}
 
 
