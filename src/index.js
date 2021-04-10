@@ -1,3 +1,7 @@
+//start dotenv
+const dotenv = require('dotenv');
+dotenv.config();
+
 //imports
 const express = require('express');
 const path = require('path');
@@ -9,7 +13,7 @@ const fs = require('fs')
 const app = express();
 
 //accept urlencoded requests
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 //enabling signed cookies
 app.use(cookieParser(process.env.SECRET || 'testSecret'));
 
@@ -27,10 +31,8 @@ app.use('/imgs',express.static(path.join(__dirname + '/imgs')));
 app.post('/auth', (req, res) => {
   const {password, group} = req.body;
 
-  console.log(req.body)
-
   // one password for all users
-  const authPhrase = 'ce-hub';
+  const authPhrase = process.env.PASSWORD || 'ce-hub';
 
   if(password !== authPhrase){
     res.sendFile(path.join(__dirname + '/html/login-error.html'));
@@ -46,7 +48,6 @@ app.post('/auth', (req, res) => {
 // custom middleware to check if user is authenticated
 const checkAuth = (req, res, next) => {
   const {qid} = req.signedCookies;
-  console.log(qid)
   if(qid){
     next();
   }else{
@@ -85,9 +86,30 @@ app.get('/schedule', checkAuth, (req, res) => {
   if(fs.existsSync(pathToFile)){
     res.sendFile(pathToFile);
   }else{
-    res.sendFile(path.join(__dirname + '/html/free.html'));
+    group === 'a1' && day === 3 || group === 'a2' && day === 2 ?
+      res.sendFile(path.join(__dirname + '/html/lab.html')):
+      res.sendFile(path.join(__dirname + '/html/free.html'));
   }
+});
 
+
+/**
+ * @endpoint Logout
+ * @removes auth cookie
+ * @redirects /auth
+ */
+app.get('/logout', (req, res) => {
+  res.clearCookie('qid');
+  res.redirect('/auth');
+});
+
+
+/**
+ * @endpoint GET announcements
+ * @returns home page html
+ */
+ app.get('/announcements', checkAuth, (_, res) => {
+  res.sendFile(path.join(__dirname + '/html/home.html'));
 });
 
 
@@ -96,7 +118,7 @@ app.get('/schedule', checkAuth, (req, res) => {
  * @returns home page html
  */
 app.get('/', checkAuth, (_, res) => {
-  res.sendFile(path.join(__dirname + '/html/home.html'));
+  res.redirect('/schedule');
 });
 
 
