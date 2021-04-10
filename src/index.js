@@ -8,9 +8,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const fs = require('fs')
-
+const requestIp = require('request-ip');
 // initiate express app
 const app = express();
+
+app.use(requestIp.mw())
 
 //accept urlencoded requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -75,6 +77,11 @@ app.get('/auth', (req,res) =>{
 app.get('/schedule', checkAuth, (req, res) => {
   //getting group from cookie
   const {qid:group} = req.signedCookies;
+
+  const time = new Date();
+  const ip = req.clientIp;
+
+  console.log(`[${time.toLocaleTimeString('en-EG')} ${time.toLocaleDateString('en-EG')}]: IP: ${ip} - Group: ${group}`);
 
   const weekday = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   const day = new Date().getDay();
