@@ -10,8 +10,8 @@ h1 {
     width: 50%;
     margin:auto;
     margin-top: 150px !important;
-    font-family: 'Pacifico', cursive;
-    background-image: linear-gradient(to bottom,#6a71c2, #c39260 ,#2C2F33);
+    font-family: 'Source Sans Pro';
+    background-image: linear-gradient(to bottom, #001a3b, #002a3b, #00393b);
     box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
     border-radius: 15px;
     -webkit-border-radius: 15px;
