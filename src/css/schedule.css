@@ -11,6 +11,7 @@ h1 {
     margin:auto;
     margin-top: 150px !important;
     font-family: 'Oswald';
+    color: white;
     background-image: linear-gradient(to bottom, #001a3b, #002a3b, #00393b);
     box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
     border-radius: 15px;
