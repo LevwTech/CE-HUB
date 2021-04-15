@@ -68,6 +68,11 @@ height: 250px;
     -o-border-radius: 30px ;
     opacity: 0.9;
     margin-top: 200px !important;
+
+    animation-name: bordercolor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .important h1{
     text-transform: uppercase;
@@ -99,6 +104,10 @@ height: 250px;
     margin-right: 40px ;
     margin-left: 40px ;
     border: 5px solid black;
+    animation-name: bordercolor;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 .about h1{
     text-transform: uppercase;
@@ -121,4 +130,19 @@ li {
     padding-top: 10px;
 }
 
+@keyframes bordercolor {
 
+0% {
+border-color: white;
+
+}
+
+50% {
+border-color: #004a8f;
+
+}
+100% {
+    border-color: black;
+}
+
+}
