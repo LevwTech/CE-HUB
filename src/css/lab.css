@@ -9,7 +9,7 @@ section {
     margin:auto;
     margin-top: 200px !important;
     font-family: 'Pacifico', cursive;
-    background-image: linear-gradient(to bottom,#6a71c2, #c39260 ,#2C2F33);
+    background-color: #2C2F33;
     box-shadow:0 0 20px 5px rgba(0, 0, 0, 0.733);
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -18,7 +18,29 @@ section {
     -o-border-radius: 15px;
     opacity: 0.9;
     transition-duration: 300ms; 
+    color: white;
+    margin-bottom: 30px;
+    border: 10px solid black;
+
+    animation-name: colorbackground;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
 }
+@keyframes colorbackground {
+    0% {
+background-color: #2C2F33;
+border-color: black;
+    }
+
+    100% {
+        background-color: black;
+        border-color: #2C2F33;
+    }
+}
+
+
 .today:hover{
     width: 82%;
 }

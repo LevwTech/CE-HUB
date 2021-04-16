@@ -24,6 +24,13 @@ form {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+@media only screen and  (max-width: 500px) {
+form {
+  width: 300px;
+  margin: 30% auto
+}
+
+}
 
 h1 {
   text-align: center;
