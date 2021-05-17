@@ -1,150 +1,176 @@
-
-.cover  {
+.cover {
   height: 590px;
-  padding: 100px;  
+  padding: 100px;
 }
 
-.choose{
-
+.choose {
   width: 340px;
-  background: rgba(0,0,0,0.8);
-  margin:auto ;
-  color:#fff;
-  box-shadow:0 0 20px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
+  margin: auto;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   margin-top: 10px !important;
 }
-.choose h1{
+.choose h1 {
   text-align: center;
-  padding:2%;
+  padding: 2%;
   font-family: sans-serif;
 }
-.parent{
- display: flex;
- align-items: center;
-width: 700px;
-margin: auto;
-margin-top: 60px !important;
-height: 250px;
+.parent {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  margin: auto;
+  margin-top: 60px !important;
+  height: 250px;
 
-  background: rgba(0,0,0,0.8);
-  box-shadow:0 0 20px 2px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 .parent a {
-    height: 100%;
-    font-size: 140px;
-    text-decoration: none;
-    width: calc(100%/3);
-    text-align: center;
-    line-height: 240px;
-    color: rgb(177, 177, 177);
-    font-family: sans-serif;
-    font-weight: bold;
-    padding: 0 10px 0 10px;
-    transition-duration: 400ms;
+  height: 100%;
+  font-size: 140px;
+  text-decoration: none;
+  width: calc(100% / 3);
+  text-align: center;
+  line-height: 240px;
+  color: rgb(177, 177, 177);
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  transition-duration: 400ms;
 }
 .parent img {
-    height: 100%;
-    width: calc(100%/3)
+  height: 100%;
+  width: calc(100% / 3);
 }
 
-.parent a:hover{
-    color: white;
-    margin: 30px;
+.parent a:hover {
+  color: white;
+  margin: 30px;
+}
+.extra {
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 500px;
+  border: 5px solid black;
+  background-color: #004a8f;
+  padding: 40px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  opacity: 0.9;
+  margin-top: 200px !important;
+
+  animation-name: bordercolor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.extra h1 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-shadow: 0 3px 5px black;
+  text-indent: left;
+  padding: 30px;
+  text-align: left;
+}
+.extra img {
+  width: 100%;
 }
 
 .important {
-    margin-right: 40px ;
-    margin-left: 40px ;
-    margin-bottom: 500px;
-    border: 5px solid black;
-    background-color: #004a8f;
-    padding: 40px;
-    border-radius: 30px ;
-    -webkit-border-radius: 30px ;
-    -moz-border-radius: 30px ;
-    -ms-border-radius: 30px ;
-    -o-border-radius: 30px ;
-    opacity: 0.9;
-    margin-top: 200px !important;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 500px;
+  border: 5px solid black;
+  background-color: #004a8f;
+  padding: 40px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  opacity: 0.9;
+  margin-top: 200px !important;
 
-    animation-name: bordercolor;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+  animation-name: bordercolor;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
-.important h1{
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-shadow: 0 3px 5px black;
-    text-indent: left;
-    padding: 30px;
-    text-align: left;
+
+.important h1 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-shadow: 0 3px 5px black;
+  text-indent: left;
+  padding: 30px;
+  text-align: left;
 }
-.important ul{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    padding: 10px 50px;
-    display: block;
-    font-weight: bold;
+.important ul {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 10px 50px;
+  display: block;
+  font-weight: bold;
 }
 .about {
-
-    background-color: #004a8f;
-    padding: 40px;
-    margin-bottom: 300px;
-    border-radius: 30px ;
-    -webkit-border-radius: 30px ;
-    -moz-border-radius: 30px ;
-    -ms-border-radius: 30px ;
-    -o-border-radius: 30px ;
-    opacity: 0.9;
-    margin-right: 40px ;
-    margin-left: 40px ;
-    border: 5px solid black;
-    animation-name: bordercolor;
-    animation-duration: 5s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  background-color: #004a8f;
+  padding: 40px;
+  margin-bottom: 300px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  opacity: 0.9;
+  margin-right: 40px;
+  margin-left: 40px;
+  border: 5px solid black;
+  animation-name: bordercolor;
+  animation-duration: 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-.about h1{
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-shadow: 0 3px 5px black;
-    text-indent: left;
-    padding: 30px;
-    text-align: left;
+.about h1 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-shadow: 0 3px 5px black;
+  text-indent: left;
+  padding: 30px;
+  text-align: left;
 }
-.about p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    padding: 10px 50px;
-    display: block;
-    font-weight: bold;
+.about p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  padding: 10px 50px;
+  display: block;
+  font-weight: bold;
 }
 li {
-
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 @keyframes bordercolor {
+  0% {
+    border-color: white;
+  }
 
-0% {
-border-color: white;
-
-}
-
-50% {
-border-color: #004a8f;
-
-}
-100% {
+  50% {
+    border-color: #004a8f;
+  }
+  100% {
     border-color: black;
-}
-
+  }
 }
