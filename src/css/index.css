@@ -4,11 +4,12 @@
 }
 
 html {
-  background: url('../imgs/background.jpg') no-repeat center center fixed;
+  background: url("../imgs/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  /* . */
 }
 
 form {
@@ -24,18 +25,17 @@ form {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-@media only screen and  (max-width: 500px) {
-form {
-  width: 300px;
-  margin: 30% auto
-}
-
+@media only screen and (max-width: 500px) {
+  form {
+    width: 300px;
+    margin: 30% auto;
+  }
 }
 
 h1 {
   text-align: center;
   margin-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .input-box {
@@ -147,7 +147,7 @@ h1 {
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
