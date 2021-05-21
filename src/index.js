@@ -8,11 +8,14 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fs = require("fs");
-const requestIp = require("request-ip");
+const mongoose = require('mongoose');
+
+const Slot= require('./models/timetable');
+
+mongoose.connect(process.env.DATABASE, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // initiate express app
 const app = express();
-app.use(requestIp.mw());
 
 //accept urlencoded requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -74,41 +77,16 @@ app.get("/auth", (req, res) => {
  * @redirects to /auth for unauthenticated users
  */
 app.get("/schedule", checkAuth, (req, res) => {
-  //getting group from cookie
+  res.sendFile(path.join(__dirname + "/html/template.html"));
+});
+
+app.post('/schedule', async (req, res) => {
   const { qid: group } = req.signedCookies;
   const time = new Date();
-  const ip = req.clientIp;
 
-  console.log(
-    `[${time.toLocaleTimeString("en-EG")} ${time.toLocaleDateString(
-      "en-EG"
-    )}]: IP: ${ip} - Group: ${group}`
-  );
+  const slots = await Slot.findOne({group, day: time.getDay()});
 
-  const weekday = [
-    "sunday",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursday",
-    "friday",
-    "saturday",
-  ];
-  const day = new Date().getDay();
-
-  //construct a path to the correct file from date and group
-  const pathToFile = path.join(
-    __dirname + `/html/${group}${weekday[day]}.html`
-  );
-
-  //check if that file exists to send it or the free page
-  if (fs.existsSync(pathToFile)) {
-    res.sendFile(pathToFile);
-  } else {
-    (group === "a1" && day === 3) || (group === "a2" && day === 2)
-      ? res.sendFile(path.join(__dirname + "/html/lab.html"))
-      : res.sendFile(path.join(__dirname + "/html/free.html"));
-  }
+  res.status(200).json( slots.timetable || []);
 });
 
 /**
@@ -141,8 +119,15 @@ app.use("*", (_, res) => {
   res.send("<h1>404</h1>");
 });
 
-//start the server
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`server started at http://localhost:${PORT}`);
+// connecting to database
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  //start the server
+  console.log('Connected to Database');
+  const PORT = process.env.PORT || 8080;
+  app.listen(PORT, () => {
+    console.log(`server started at http://localhost:${PORT}`);
+  });
 });
+

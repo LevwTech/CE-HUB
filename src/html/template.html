@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Lab</title>
+    <title>Free Day</title>
     <link rel="stylesheet" href="../css/master.css" />
-    <link rel="stylesheet" href="../css/lab.css" />
+    <link rel="stylesheet" href="../css/template.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
       rel="stylesheet"
@@ -15,6 +15,69 @@
       rel="stylesheet"
     />
   </head>
+
+  <script>
+    const generateList = (slots) => {
+      let listElement = document.getElementById('list');
+      const list = slots
+        .map((slot) => {
+          return `
+            <div>
+                <h2>From ${slot.startTime} to ${slot.endTime}</h2>
+                <h3>
+                ${slot.course}
+                <a
+                    href="${slot.joinLink}"
+                    target="_blank"
+                    >Link</a
+                >
+                </h3>
+            </div>
+            `;
+        })
+        .join(' ');
+
+      const weekdays = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+      ];
+
+      const date = new Date();
+      const day = weekdays[date.getDay()];
+
+      listElement.innerHTML = `
+            <h1>${day}</h1>
+            ${list}
+        `;
+    };
+
+    fetch('/schedule', {
+      method: 'POST',
+      body: JSON.stringify({}),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        let off = document.getElementById('off');
+        let list = document.getElementById('list');
+        if (res.length === 0) {
+          off.style.display = 'block';
+        } else {
+          generateList(res);
+          list.style.display = 'block';
+        }
+      });
+  </script>
 
   <body>
     <nav>
@@ -29,27 +92,15 @@
         <li><a href="/logout">Log out</a></li>
       </ul>
     </nav>
-    <section>
-      <div class="today">Online Labs!</div>
 
-      <div class="firstall">
-        <div class="first">
-          First you need to check which group you are in from A1 to A6
-        </div>
+    <section id="list"></section>
 
-        <div class="labnames">
-          <img src="../imgs/labnames1.PNG" alt="labnames1" />
-          <img src="../imgs/labnames1.PNG" alt="labnames2" />
-        </div>
-      </div>
-
-      <div class="thenall">
-        <div class="then">
-          Then know your labs for today based on this schedule
-        </div>
-        <div class="labschdule">
-          <img src="../imgs/lab.PNG" alt="labschedule" />
-        </div>
+    <section id="off">
+      <div class="free">Today is a Day-Off!</div>
+      <img src="../imgs/free.svg" alt="Day Off" />
+      <div class="do">
+        Have fun! watch a movie, read a book! play video games or go out with
+        friends!
       </div>
     </section>
 
@@ -63,7 +114,7 @@
         </div>
       </div>
 
-      <!-- Or, if linking from a different page:
+      <!-- HTML HASHLINKS Or, if linking from a different page:
             file:///E:/Projects/CE%20HUB/CE-HUB/html/home.html#announcements
             file:///E:/Projects/CE%20HUB/CE-HUB/html/home.html#About
 
