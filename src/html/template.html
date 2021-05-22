@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Free Day</title>
+    <title>Computer Engineering Hub</title>
     <link rel="stylesheet" href="../css/master.css" />
     <link rel="stylesheet" href="../css/template.css" />
     <link
@@ -18,7 +18,7 @@
 
   <script>
     const generateList = (slots) => {
-      let listElement = document.getElementById('list');
+      let listElement = document.getElementById("list");
       const list = slots
         .map((slot) => {
           return `
@@ -35,16 +35,16 @@
             </div>
             `;
         })
-        .join(' ');
+        .join(" ");
 
       const weekdays = [
-        'Sunday',
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
       ];
 
       const date = new Date();
@@ -56,25 +56,25 @@
         `;
     };
 
-    fetch('/schedule', {
-      method: 'POST',
+    fetch("/schedule", {
+      method: "POST",
       body: JSON.stringify({}),
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
     })
       .then((res) => {
         return res.json();
       })
       .then((res) => {
-        let off = document.getElementById('off');
-        let list = document.getElementById('list');
+        let off = document.getElementById("off");
+        let list = document.getElementById("list");
         if (res.length === 0) {
-          off.style.display = 'block';
+          off.style.display = "block";
         } else {
           generateList(res);
-          list.style.display = 'block';
+          list.style.display = "block";
         }
       });
   </script>
