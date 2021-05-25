@@ -1,5 +1,5 @@
 section {
-  height: 1000px;
+  height: 1500px;
 }
 h1 {
   line-height: 100px;
@@ -9,7 +9,7 @@ h1 {
   width: 40%;
   margin: auto;
   margin-top: 150px !important;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   background-color: rgba(0, 0, 0, 0.733);
   color: white;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.733);
@@ -32,7 +32,7 @@ h1:hover {
   width: 70%;
   margin: auto;
   margin-top: 200px !important;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   /* background-image: linear-gradient(to bottom,#6a71c2, #c39260 ,#2C2F33); */
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.733);
   border-radius: 15px;
@@ -64,7 +64,7 @@ img {
   margin: auto;
   color: #c39260;
   text-shadow: 0 4px 5px black;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   line-height: 60px;
 }
 
@@ -103,7 +103,7 @@ img {
   font-size: 40px;
   color: #e6e6fa;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.541);
-  font-family: 'Changa', sans-serif;
+  font-family: "Changa", sans-serif;
 }
 #list h3 {
   text-align: center;
