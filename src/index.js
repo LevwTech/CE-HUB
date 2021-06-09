@@ -25,6 +25,7 @@ app.use(cookieParser(process.env.SECRET || "testSecret"));
 //set css & imgs as a public folder
 app.use("/css", express.static(path.join(__dirname + "/css")));
 app.use("/imgs", express.static(path.join(__dirname + "/imgs")));
+app.use("/scripts", express.static(path.join(__dirname + "/scripts")));
 
 /**
  * @endpoint POST authentication
