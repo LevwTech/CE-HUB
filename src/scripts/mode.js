@@ -67,6 +67,7 @@ if(currentMode === '1'){
 }
 
 btn.addEventListener(`click`, function () {
-  setCookie('md', currentMode === '0' ? '1' : '0', 365);
+  currentMode = currentMode === '0' ? '1' : '0';
+  setCookie('md', currentMode, 365);
   changeTheme();
 });
